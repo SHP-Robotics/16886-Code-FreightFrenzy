@@ -22,7 +22,9 @@ public class SampleTeleOp extends BaseRobot {
     }
 
     @Override
-    public void start() { super.start(); }
+    public void start() {
+        super.start();
+    }
 
     @Override
     public void loop() {
@@ -32,12 +34,15 @@ public class SampleTeleOp extends BaseRobot {
         Control.drive.tankanumDrive(gamepad1.right_stick_y, gamepad1.left_stick_y, gamepad1.right_stick_x);
 
         // control armLiftMotor
-//        if (gamepad1.dpad_down || gamepad1.a) {
-//            Control.moveMotor(Devices.armLiftMotor, 1.0);
-//        } else if (gamepad1.dpad_up || gamepad1.b) {
-//            Control.moveMotor(Devices.armLiftMotor, -1.0);
-//        } else {
-//            Control.moveMotor(Devices.armLiftMotor, 0.0);
-//        }
+        if (gamepad1.dpad_down || gamepad1.a) {
+            Control.motor.moveMotor(Devices.armLiftMotor, 1.0);
+        } else if (gamepad1.dpad_up || gamepad1.b) {
+            Control.motor.moveMotor(Devices.armLiftMotor, -1.0);
+        } else {
+            Control.motor.moveMotor(Devices.armLiftMotor, 0.0);
+        }
+
     }
+
 }
+
