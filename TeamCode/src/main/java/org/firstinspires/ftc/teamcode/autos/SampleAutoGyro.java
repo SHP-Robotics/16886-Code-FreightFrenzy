@@ -33,6 +33,8 @@ public class SampleAutoGyro extends LinearOpMode {
 
         waitForStart();
 
+        if (isStopRequested()) return;
+
         Control.auto.strafeToPosition(10, 0.5);
 
         Control.auto.turnWithGyro(90, -1.0);
