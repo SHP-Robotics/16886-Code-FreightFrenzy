@@ -27,8 +27,8 @@ public class Devices {
         Devices.imu = hardwareMap.get(BNO055IMU.class, "imu");
         Devices.webcam = hardwareMap.get(WebcamName.class, "Webcam 1");
 
-//        Devices.armLiftMotor = hardwareMap.get(DcMotor.class, "armLiftMotor");
-//        Devices.armLiftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        Devices.armLiftMotor = hardwareMap.get(DcMotor.class, "armLiftMotor");
+        Devices.armLiftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 //        Devices.armAdjustServo = hardwareMap.get(Servo.class,"armAdjustServo");
 
 //        Devices.lightStrip = hardwareMap.get(RevBlinkinLedDriver.class, "lightStrip");
