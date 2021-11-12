@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode.teleops;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.ServoControllerEx;
 import com.qualcomm.robotcore.util.Range;
 
 import org.firstinspires.ftc.robotcore.external.Const;
@@ -34,15 +35,31 @@ public class SampleTeleOp extends BaseRobot {
         Control.drive.tankanumDrive(gamepad1.right_stick_y, gamepad1.left_stick_y, gamepad1.right_stick_x);
 
         // control armLiftMotor
-        if (gamepad1.dpad_down || gamepad1.a) {
-            Control.motor.moveMotor(Devices.armLiftMotor, 1.0);
-        } else if (gamepad1.dpad_up || gamepad1.b) {
-            Control.motor.moveMotor(Devices.armLiftMotor, -1.0);
+        if (gamepad1.dpad_down) {
+            Control.motor.moveMotor(Devices.armLiftMotor, 0.5);
+        } else if (gamepad1.dpad_up) {
+            Control.motor.moveMotor(Devices.armLiftMotor, -0.5);
         } else {
             Control.motor.moveMotor(Devices.armLiftMotor, 0.0);
         }
 
+        // control servoLiftMotor
+        if (gamepad1.circle) {
+            Control.servo.setServoPosition(Devices.armAdjustServo, 1.0);
+        } else if (gamepad1.triangle) {
+            Control.servo.setServoPosition(Devices.armAdjustServo, 0.5);
+
+
+        }
+
+
+
+        
+
+
     }
 
 }
+
+
 

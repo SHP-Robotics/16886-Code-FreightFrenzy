@@ -29,7 +29,7 @@ public class Devices {
 
         Devices.armLiftMotor = hardwareMap.get(DcMotor.class, "armLiftMotor");
         Devices.armLiftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-//        Devices.armAdjustServo = hardwareMap.get(Servo.class,"armAdjustServo");
+        Devices.armAdjustServo = hardwareMap.get(Servo.class,"armAdjustServo");
 
 //        Devices.lightStrip = hardwareMap.get(RevBlinkinLedDriver.class, "lightStrip");
 //        Devices.distanceSensor = hardwareMap.get(DistanceSensor.class, "distanceSensor");

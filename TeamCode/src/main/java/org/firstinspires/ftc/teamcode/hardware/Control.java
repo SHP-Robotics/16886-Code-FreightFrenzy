@@ -56,8 +56,9 @@ public class Control extends Devices {
     public static class drive {
 
         public static void configureDriveMotors() {
-            rightFrontDriveMotor.setDirection(DcMotorEx.Direction.REVERSE);
+//            rightFrontDriveMotor.setDirection(DcMotorEx.Direction.REVERSE);
             rightBackDriveMotor.setDirection(DcMotorEx.Direction.REVERSE);
+            leftFrontDriveMotor.setDirection(DcMotorEx.Direction.REVERSE);
 
             leftFrontDriveMotor.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
             leftBackDriveMotor.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
@@ -85,8 +86,8 @@ public class Control extends Devices {
         public static void tankanumDrive(double rightPwr, double leftPwr, double lateralPwr) {
             double leftFrontPower = Range.clip(leftPwr - lateralPwr, -1.0, 1.0);
             double leftBackPower = Range.clip(leftPwr + lateralPwr, -1.0, 1.0);
-            double rightFrontPower = Range.clip(rightPwr - lateralPwr, -1.0, 1.0);
-            double rightBackPower = Range.clip(rightPwr + lateralPwr, -1.0, 1.0);
+            double rightFrontPower = Range.clip(rightPwr + lateralPwr, -1.0, 1.0);
+            double rightBackPower = Range.clip(rightPwr - lateralPwr, -1.0, 1.0);
 
             leftFrontDriveMotor.setPower(leftFrontPower);
             leftBackDriveMotor.setPower(leftBackPower);
