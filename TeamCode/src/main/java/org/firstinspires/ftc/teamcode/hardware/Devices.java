@@ -8,7 +8,7 @@ import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 
 public class Devices {
     // to add a hardware device, initialize the device here and map them in BaseBot
-    public static DcMotor leftFrontDriveMotor, rightFrontDriveMotor, leftBackDriveMotor, rightBackDriveMotor, armLiftMotor;
+    public static DcMotor leftFrontDriveMotor, rightFrontDriveMotor, leftBackDriveMotor, rightBackDriveMotor, armLiftMotor, intakeMotor;
     public static Servo armAdjustServo;
     public static RevBlinkinLedDriver lightStrip;
     public static DistanceSensor distanceSensor;
@@ -30,6 +30,7 @@ public class Devices {
         Devices.armLiftMotor = hardwareMap.get(DcMotor.class, "armLiftMotor");
         Devices.armLiftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Devices.armAdjustServo = hardwareMap.get(Servo.class,"armAdjustServo");
+        Devices.intakeMotor = hardwareMap.get(DcMotor.class, "intakeMotor");
 
 //        Devices.lightStrip = hardwareMap.get(RevBlinkinLedDriver.class, "lightStrip");
 //        Devices.distanceSensor = hardwareMap.get(DistanceSensor.class, "distanceSensor");

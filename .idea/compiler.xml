@@ -4,6 +4,8 @@
     <bytecodeTargetLevel target="1.8">
       <module name="16886-Code-FreightFrenzy.FtcRobotController" target="11" />
       <module name="16886-Code-FreightFrenzy.TeamCode" target="11" />
+      <module name="16886_new_code.FtcRobotController" target="11" />
+      <module name="16886_new_code.TeamCode" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -51,7 +51,7 @@ public class SampleTeleOp extends BaseRobot {
 
 
         }
-
+           Control.motor.moveMotor(Devices.intakeMotor, gamepad1.right_trigger);
 
 
         
