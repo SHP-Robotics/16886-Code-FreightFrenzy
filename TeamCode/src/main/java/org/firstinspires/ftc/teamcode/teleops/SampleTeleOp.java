@@ -35,10 +35,14 @@ public class SampleTeleOp extends BaseRobot {
         Control.drive.tankanumDrive(gamepad1.right_stick_y, gamepad1.left_stick_y, gamepad1.right_stick_x);
 
         // control armLiftMotor
-        if (gamepad1.dpad_down) {
+        if (gamepad1.dpad_up) {
             Control.motor.moveMotor(Devices.armLiftMotor, 0.5);
-        } else if (gamepad1.dpad_up) {
+        } else if (gamepad1.dpad_down) {
             Control.motor.moveMotor(Devices.armLiftMotor, -0.5);
+        } else if (gamepad1.dpad_right) {
+            Control.motor.moveMotor(Devices.armLiftMotor, 0.15);
+        } else if (gamepad1.dpad_left) {
+            Control.motor.moveMotor(Devices.armLiftMotor, -0.15);
         } else {
             Control.motor.moveMotor(Devices.armLiftMotor, 0.0);
         }
@@ -51,7 +55,16 @@ public class SampleTeleOp extends BaseRobot {
 
 
         }
+        //control intakeMotor
            Control.motor.moveMotor(Devices.intakeMotor, gamepad1.right_trigger);
+
+        //control conveyorMotor
+
+            Control.motor.moveMotor(Devices.conveyorMotor, -(gamepad1.right_trigger));
+
+
+
+
 
 
         

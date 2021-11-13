@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/16886_new_code.iml" filepath="$PROJECT_DIR$/.idea/modules/16886_new_code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FtcRobotController/16886_new_code.FtcRobotController.iml" filepath="$PROJECT_DIR$/.idea/modules/FtcRobotController/16886_new_code.FtcRobotController.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TeamCode/16886_new_code.TeamCode.iml" filepath="$PROJECT_DIR$/.idea/modules/TeamCode/16886_new_code.TeamCode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Visualizer/16886_new_code.Visualizer.iml" filepath="$PROJECT_DIR$/.idea/modules/Visualizer/16886_new_code.Visualizer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/16886-Code-FreightFrenzy.iml" filepath="$PROJECT_DIR$/.idea/modules/16886-Code-FreightFrenzy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FtcRobotController/16886-Code-FreightFrenzy.FtcRobotController.iml" filepath="$PROJECT_DIR$/.idea/modules/FtcRobotController/16886-Code-FreightFrenzy.FtcRobotController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TeamCode/16886-Code-FreightFrenzy.TeamCode.iml" filepath="$PROJECT_DIR$/.idea/modules/TeamCode/16886-Code-FreightFrenzy.TeamCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Visualizer/16886-Code-FreightFrenzy.Visualizer.iml" filepath="$PROJECT_DIR$/.idea/modules/Visualizer/16886-Code-FreightFrenzy.Visualizer.iml" />
     </modules>
   </component>
 </project>
