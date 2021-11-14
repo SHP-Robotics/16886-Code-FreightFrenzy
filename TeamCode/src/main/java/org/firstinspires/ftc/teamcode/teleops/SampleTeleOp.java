@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.teleops;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.ServoControllerEx;
+import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
 import org.firstinspires.ftc.robotcore.external.Const;
@@ -16,6 +17,10 @@ import com.qualcomm.robotcore.hardware.I2cDeviceSynch;
 @TeleOp
 
 public class SampleTeleOp extends BaseRobot {
+
+    private ElapsedTime timer = new ElapsedTime();
+    double servoPower = 1.0;
+    private int servoVariable = 0;
 
     @Override
     public void init() {
@@ -48,29 +53,34 @@ public class SampleTeleOp extends BaseRobot {
         }
 
         // control servoLiftMotor
-        if (gamepad1.circle) {
-            Control.servo.setServoPosition(Devices.armAdjustServo, 1.0);
-        } else if (gamepad1.triangle) {
-            Control.servo.setServoPosition(Devices.armAdjustServo, 0.5);
+        if (gamepad1.b && timer.seconds() > 1) {
+            Control.servo.setServoPosition(Devices.armAdjustServo, servoPower);
+            timer.reset();
+            servoPower = Math.abs(servoPower - 1.0);
 
+//            if (servoVariable == 0) {
+//                servoVariable = 1;
+//            } else if (servoVariable == 1) ;
+//            Control.servo.setServoPosition(Devices.armAdjustServo, 0.5);
+//            servoVariable = 0;
 
         }
+
+            //control carouselServo
+            Devices.carouselServo.setPower(-gamepad1.left_trigger);
+
+
+
+
         //control intakeMotor
-           Control.motor.moveMotor(Devices.intakeMotor, gamepad1.right_trigger);
+        Control.motor.moveMotor(Devices.intakeMotor, gamepad1.right_trigger);
 
         //control conveyorMotor
 
-            Control.motor.moveMotor(Devices.conveyorMotor, -(gamepad1.right_trigger));
-
-
-
-
-
-
-        
-
+        Control.motor.moveMotor(Devices.conveyorMotor, gamepad1.right_trigger);
 
     }
+
 
 }
 
